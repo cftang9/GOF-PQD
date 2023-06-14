@@ -1,2 +1,2 @@
 # GOFforPQD
-Goodness-of-fit test for Positive Dependence Quadrant
+Goodness-of-fit test for Positive Quadrant Dependence
