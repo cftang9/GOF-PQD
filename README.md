@@ -7,13 +7,15 @@ Additionally, all the numerical results in the paper can be reproduced using the
 
 ### A simple example
 
-### For your own dataset
+### For your dataset
 
 ## Simulation Results
 
 #### Clayton, Frank, Gumbel, and Gaussian copula
 
 #### FGM, CA, and restricted-t
+
+#### Other copulas
 
 ####
 
