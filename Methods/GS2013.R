@@ -10,37 +10,18 @@ kernel_Epanechnikov <- function(x,h=1){
 }
 
 GS2013<- function(Data,m=14,h1=1.5/m,h2=h1,BB=1000,timer=0){
-  #library(mvtnorm)
-  #set.seed(100); X = rmvnorm(100,sigma = array(c(1,0.9,0.9,1),c(2,2))) ; m=14; h1=1.5/m; h2=h1; BB=1000; timer=0; 
   n = length(Data[,1]); 
   mesh = seq(0,1,by=1/(m+1)); 
-  
-  Fn = ecdf(Data[,1]); Gn = ecdf(Data[,2]); 
+
   C_n = array(,n); 
-  u_n = Fn(Data[,1])*n/(n+1); v_n = Gn(Data[,2])*n/(n+1); 
+  u_n = rank(Data[,1])/(n+1); v_n = rank(Data[,2])/(n+1); 
   
   for(i in 1:n){
     C_n[i] = mean(u_n<=u_n[i] & v_n<=v_n[i]); 
   }
-  #CvM = sum( (pmax(Fn(X[,1])*Gn(X[,2])-C_n,0))^2 );
   AD = sum( (pmax(u_n*v_n-C_n,0))^2/(u_n*v_n*(1-u_n)*(1-v_n))); 
+  print(AD)
   
-  # delta = 0.05; 
-  # u_g = seq(0,1,by=delta); v_g = seq(0,1,by=delta);
-  # d = length(u_g); 
-  # u_g = u_g[-d]; u_g = u_g[-1];
-  # v_g = v_g[-d]; v_g = v_g[-1];
-  # d = d - 2; 
-  # C_g = array(,d^2); 
-  # 
-  # KS = 0; 
-  # for(i in 1:d^2){
-  #    ii = (i - 1) %/% d + 1;
-  #    ij = (i - 1) %%  d + 1;
-  #    C_g[i] = mean(n*Fn(X[,1])/(n+1)<=u_g[ii] & n*Gn(X[,2])/(n+1)<=v_g[ij]); 
-  #    KS = max(sqrt(n)*max(pmax(u_g[ii]*v_g[ii]-C_g[i],0)),KS); 
-  # }
-
   mesh = seq(0,1,by=1/(m+1)); 
   ui = array(,(m+2)^2); vj = ui; 
   Cm = array(,(m+2)^2); Dmij = array(,(m+2)^2); 
@@ -54,10 +35,7 @@ GS2013<- function(Data,m=14,h1=1.5/m,h2=h1,BB=1000,timer=0){
       Dmij[i] = ui[i]*vj[i]; 
     }
   }  
-  
-  #KSb = array(0,BB); 
-  #CvMb = array(0,BB); 
-  ADb = array(0,BB); 
+  ADb = array(0,BB); Reject_BB=0
   if(timer==1){
     start_time = Sys.time(); print(start_time)
   }
@@ -123,47 +101,40 @@ GS2013<- function(Data,m=14,h1=1.5/m,h2=h1,BB=1000,timer=0){
                        *(ui-ou)^0
                        *(vj-ov)^1
                        *Dmij);
-          cu[jj] = solve(XWX, XWY)[2];   
+        cu[jj] = solve(XWX, XWY)[2];   
       }
+      cu = round(cu,digit=10)
       cu = sort(cu); 
       cu = (cu - cu[1])/(cu[length(mv)]-cu[1]); 
-      v[nn] = quantile(cu,v_unif[nn]); 
+      v[nn] = cu[sum(cu <= v_unif[nn])]
     }
     
-    Fnb = ecdf(u); Gnb = ecdf(v); 
     C_nb = array(,n); 
-    u_nb = Fnb(u)*n/(n+1); v_nb = Gnb(v)*n/(n+1); 
+    u_nb = rank(u)/(n+1); v_nb = rank(v)/(n+1); 
     
     for(i in 1:n){
       C_nb[i] = mean(u_nb<=u_nb[i] & v_nb<=v_nb[i]); 
     }
-    #CvMb[bb] = sum( (pmax(Fnb(u)*Gnb(v)-C_nb,0))^2 );
     ADb[bb] = sum( (pmax(u_nb*v_nb-C_nb,0))^2/(u_nb*v_nb*(1-u_nb)*(1-v_nb))); #print(bb)
     
-    
-    # C_gb = array(,d^2); 
-    # for(i in 1:d^2){
-    #   ii = (i - 1) %/% d + 1;
-    #   ij = (i - 1) %%  d + 1;
-    #   C_gb[i] = mean(n*Fnb(u)/(n+1)<=u_g[ii] & n*Gnb(v)/(n+1)<=v_g[ij]); 
-    #   KSb[bb] = max(sqrt(n)*max(pmax(u_g[ii]*v_g[ii]-C_gb[i],0)),KSb[bb]); 
-    # }
-    
-    # if(timer==1){
-    #   time_int = (Sys.time()-start_time)/bb
-    #   print(bb)
-    #   print(time_int)
-    #   print(Sys.time()+time_int*(BB-bb))
-    # }
+    if(timer==1){
+      time_int = (Sys.time()-start_time)/bb
+      print(bb)
+      print(ADb[bb])
+      print(mean(ADb[1:bb]>AD))
+      print(time_int)
+      print(Reject_BB/bb*BB)
+      print(Sys.time()+time_int*(BB-bb))
+    }
   }
   
-  #KSbq = quantile(KSb,0.95); 
-  #CvMbq = quantile(CvMb,0.95); 
   ADbq = quantile(ADb,0.95); 
   
   return(list(TS = AD, 
+              CV = as.numeric(quantile(ADb,0.95)), 
               pvalue = mean(ADb>AD), 
-              Rejection = as.numeric(AD>ADbq)))
+              Rejection = as.numeric(AD>ADbq),
+              Reject_BB = Reject_BB))
 }
 
 
