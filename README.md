@@ -17,15 +17,15 @@ Temp = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 Users can choose "Method" from "EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22" for an individual GOF test. 
 When Method = "ALL", a list of test statistics, critical values, p-value, and time will be provided. 
 ```R
-      Test statistic Critical value    p-value       Time
-EL_A       1.6836183      1.3078578 0.02170000   0.282223
-EL_F       1.6836183      1.0745115 0.01110000   5.488664
-DS_04     10.2401185      8.4960000 0.02459046   0.431073
-S_05       0.8768124      0.6618519 0.00270000  35.102992
-GS_10     19.9327802     12.9055105 0.01500000 102.143397
-GS_13      1.2212406      0.4959487 0.00300000 377.651592
-LW_14     -2.4486330     -2.4863221 0.05345000  18.588535
-LG_22      0.9756259      0.8003936 0.05000000  34.879393
+      Test statistic Critical value     p-value       Time
+EL_A       1.4826943      1.3078578 0.033300000   0.181318
+EL_F       1.4826943      1.0745115 0.019500000   5.487228
+DS_04     12.9556311      8.9260000 0.009883926   0.439888
+S_05       0.6109403      0.6618519 0.087200000  35.741555
+GS_10     22.3303691     12.9055105 0.010100000 103.828279
+GS_13      0.6360344      0.5629177 0.037000000 376.480714
+LW_14     -1.7766998     -2.4863221 0.204730000  18.682560
+LG_22      0.4655116      0.7543264 0.050000000  34.719584
 ```
 <img width="2221" height="1200" alt="Illustrating_Plots" src="https://github.com/user-attachments/assets/a8818d26-c0dd-4101-9cc0-c667f057f3f0" />
 
