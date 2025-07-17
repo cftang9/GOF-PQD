@@ -11,6 +11,12 @@ Additionally, all the numerical results in the paper can be reproduced using the
 
 ## Simulation Results
 
+#### Clayton, Frank, Gumbel, and Gaussian copula
+
+#### FGM, CA, and restricted-t
+
+####
+
 ## Data Analysis
 
 ### NCAA basketball attendance data
@@ -25,7 +31,18 @@ Additionally, all the numerical results in the paper can be reproduced using the
 
 
 
-Lastly, we implemented the proposed GOF tests to test if the three datasets, Twins, Education, and Stocks data, from Tang et al. (2019), satisfy PQD. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
