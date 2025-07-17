@@ -159,7 +159,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     return(list(LG_22=LG_22))
   }
   
-  if(method=="All"){
+  if(method=="ALL"){
     Table = array(,c(8,4))
     colnames(Table)<-c("Test statistic", "Critical value", "p-value", "Time")
     row.names(Table)<-c("EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22")
