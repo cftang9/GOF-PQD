@@ -1,5 +1,5 @@
 #Thanks to Dr. Lu and Dr. Ghosh for their kindness sharing their codes. 
-#Here we only the AD type test. 
+#Here we focus the AD type test. 
 
 #######################################################################
 # function for testing PQD

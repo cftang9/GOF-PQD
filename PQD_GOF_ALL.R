@@ -1,4 +1,4 @@
-source("PQD_GOF_Methods.r")
+source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF_Methods.R")
 
 PQD_GOF_ALL = function(Data,method="ALL",Figure=T,log_Fig=T){
   n = length(Data[,1])
