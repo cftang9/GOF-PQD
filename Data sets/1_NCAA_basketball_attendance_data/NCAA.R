@@ -1,4 +1,12 @@
 rm(list=ls(all=TRUE))
+
+rm(list=ls(all=TRUE))
+source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
+Data = read.csv("")
+
+
+
+
 library(readxl)
 source("PQD_GOF_ALL.r")
 
