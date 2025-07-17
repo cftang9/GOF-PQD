@@ -1,12 +1,18 @@
 source("PQD_GOF_Methods.r")
 
-PQD_GOF_ALL = function(Data,method="ALL",Figure=T){
+PQD_GOF_ALL = function(Data,method="ALL",Figure=T,log_Fig=T){
   n = length(Data[,1])
   if(Figure==T){
     par(mfrow=c(1,2))
-    plot(Data[,1],Data[,2],xlab="X",ylab="Y")
+    if(log_Fig==F){
+        plot(Data[,1],Data[,2],xlab="X",ylab="Y")
+      }
+    if(log_Fig==T){
+        plot(log(Data[,1]),log(Data[,2]),xlab="log X",ylab="log Y")
+      }
     plot(rank(Data[,1])/(n+1),rank(Data[,2])/(n+1),
          xlim=c(0,1),ylim=c(0,1),
+         main = "Scatterplot of pseudo-observations", 
          xlab="U", ylab="V")
     par(mfrow=c(1,1))
   }
