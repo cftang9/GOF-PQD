@@ -21,6 +21,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     temp = EL_Asy(Data)
     asy.EL = read.csv("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Methods/asy.EL.csv")
     EL_A = list(TS = temp$TS, 
+                CV = as.numeric(quantile(asy.EL,0.95)), 
                 pvalue = mean(asy.EL>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("EL_A")
@@ -38,6 +39,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
       fin.EL.independent[b0] = EL_Fin(Data0)$TS
     }
     EL_F = list(TS = temp$TS, 
+                CV = as.numeric(quantile(fin.EL.independent,0.95)), 
                 pvalue = mean(fin.EL.independent>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("EL_F")
@@ -48,6 +50,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     temp = DS_C(Data)
     
     DS_04 = list(TS = temp$TS, 
+                 CV = temp$CV, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("DS_04")
@@ -66,6 +69,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     }
     
     S_05 = list(TS = temp$TS, 
+                CV = as.numeric(quantile(fin.KS.independent,0.95)), 
                 pvalue = mean(fin.KS.independent>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("S_05")
@@ -83,6 +87,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
       fin.GS.independent[b0] = GS2010_LL(Data0)$TS
     }
     GS_10 = list(TS = temp$TS, 
+                 CV = as.numeric(quantile(fin.GS.independent,0.95)), 
                  pvalue = mean(fin.GS.independent>temp$TS), 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("GS_10")
@@ -92,6 +97,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     start.time = Sys.time()
     temp = GS2013(Data)
     GS_13 = list(TS = temp$TS, 
+                 CV = CV, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("GS_13")
@@ -110,6 +116,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     }
     
     LW_14 = list(TS = temp$TS, 
+                 CV = as.numeric(quantile(fin.LW.independent,0.05)), 
                  pvalue = mean(fin.LW.independent<temp$TS), 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("LW_14")
@@ -119,6 +126,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     start.time = Sys.time()
     temp = copula.test(Data,M=1000)
     LG_22 = list(TS = temp$ad.test, 
+                 CV = temp$CV, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("LG_22")
@@ -151,13 +159,17 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   }
   
   if(method=="All"){
+    
+    Table = array(c(7,4))
+    colnames(Table)<-c("Test statistic", "Critical value", "p-value", "Time")
+    row.names(Table)<-c("EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22")
+    
+    Table[1,1] = EL_A$TS; Table[1,2] = EL_A$CV; Table[1,3] = EL_A$pvalue; Table[1,4] = EL_A$Time; 
+    
+    print(Table)
     return(list(EL_A = EL_A, EL_F = EL_F, 
                 DS_04 = DS_04, S_05 = S_05, 
                 GS_10 = GS_10, GS_13 = GS_13, 
-                LW_14 = LW_14, LG_22 = LG_22))
+                LW_14 = LW_14, LG_22 = LG_22, Table=Table))
   }
 }
-
-# n = 50
-# W = PQD_GOF_ALL(array(runif(2*n),c(n,2)))
-# W
