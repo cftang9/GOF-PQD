@@ -19,7 +19,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   if(method=="EL_A" | method=="ALL"){
     start.time = Sys.time()
     temp = EL_Asy(Data)
-    load("asy.EL.rdata")
+    load("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Methods/asy.EL.RData")
     EL_A = list(TS = temp$TS, 
                 pvalue = mean(asy.EL>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
