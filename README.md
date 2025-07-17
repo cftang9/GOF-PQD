@@ -6,7 +6,14 @@ Additionally, all the numerical results in the paper can be reproduced using the
 ## R Code Demonstration
 
 ### A simple example
-
+```R
+# Source the main function from PQD_GOF.R online
+source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
+set.seed(10000)
+library(copula)
+Data = rCopula(50,claytonCopula(iTau(claytonCopula(),-0.6)))
+Temp = PQD_GOF(Data,Figure=T,log_Fig=F)
+```
 ### For your dataset
 
 ## Simulation Results
