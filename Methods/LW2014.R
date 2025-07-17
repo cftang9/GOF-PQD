@@ -1,6 +1,7 @@
+### Ledwina and Wyłupek (2014)
+### Method 2
 LW2 = function(Data){
-  Y = Data[,2]
-  X = Data[,1]
+  X = Data[,1]; Y = Data[,2]
   n = length(X); 
   rX = rank(X); rY = rank(Y); 
   ADs = array(NA,n); 
@@ -9,5 +10,6 @@ LW2 = function(Data){
     ADs[j] = sqrt(n)*(Cn.tilde-(rX[j]*rY[j])/(n+1)^2)/sqrt( rX[j]*rY[j]*(n-rX[j])*(n-rY[j])/( (n+1)^4 ) ); 
   }
   LW2 = min(ADs)
-  return(list(TS=LW2,Rejection=c(LW2< -2.842301)))
+  return(list(TS=LW2
+              ))
 }

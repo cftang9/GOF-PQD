@@ -22,8 +22,8 @@ EL_Fin <- function(Data){
     An021[i] = min(A021[i],An21[i]);
     An022[i] = max(A022[i],An22[i]);
     
+    # Calculating the log likelihood ratio: 
     llr11 = 0; llr12 = 0; llr21 = 0; llr22 = 0; 
-    
     if(An11[i]>10^(-10) & An11[i]<A011[i]){
       llr11 = n*An11[i]*log(A011[i] / An11[i])
     }
@@ -36,9 +36,8 @@ EL_Fin <- function(Data){
     if(An22[i]>10^(-10) & An11[i]<A011[i]){
       llr22 = n*An22[i]*log(A022[i] / An22[i])
     }
-    LLn1[i] = -2*(llr11 + llr12 + llr21 + llr22) 
+    LLn[i] = -2*(llr11 + llr12 + llr21 + llr22) 
   }
-  ELn = mean(LLn1)
-  Reject = c(ELn>1.0092251); 
-  return(list(TS=ELn, Rejection=Reject))
+  ELn = mean(LLn)
+  return(list(TS=ELn))
 }

@@ -1,5 +1,6 @@
 ### Gijbel and Sznajder 2010
 
+#density of Epanechnikov kernel
 kernel_Epanechnikov <- function(x,h=1){
   n = length(x); 
   k = array(,n); 
@@ -8,7 +9,7 @@ kernel_Epanechnikov <- function(x,h=1){
   k = ((3/4)*(1-u^2))*ind; 
   return(k)
 }
-
+#cumulative distribution of Epanechnikov kernel
 Kernel_Epanechnikov <- function(x,h=1){
   n = length(x); 
   k = array(,n); 
@@ -20,6 +21,7 @@ Kernel_Epanechnikov <- function(x,h=1){
   return(k)
 }
 
+# parameters and functions applied in local linear estimation of copula
 a0 <- function(u,h=1){
   l = (u-1)/h; r = u/h
   a0 = 3/4*(
@@ -27,7 +29,6 @@ a0 <- function(u,h=1){
   )
   return(a0)
 }
-
 a1 <- function(u,h=1){
   l = (u-1)/h; r = u/h
   a1 = 3/4*(
@@ -35,7 +36,6 @@ a1 <- function(u,h=1){
   )
   return(a1)
 }
-
 a2 <- function(u,h=1){
   l = (u-1)/h; r = u/h; 
   a2 = 3/4*(
@@ -43,7 +43,6 @@ a2 <- function(u,h=1){
   )
   return(a2)
 }
-
 k_uh <- function(x,u,h=1){
   l = (u-1)/h; r = u/h; 
   k_uh = c(l<x & x<r)*(
@@ -51,8 +50,6 @@ k_uh <- function(x,u,h=1){
   )/(a0(u,h)*a2(u,h) - (a1(u,h))^2)
   return(k_uh)
 }
-
-
 K_uh <- function(x,u,h=1){
   l = (u-1)/h; r = u/h; 
   Il = c(x<= l);
@@ -72,13 +69,13 @@ GS2010_LL = function(Data,m=14,h1=1.5/m,h2=h1,m.I=19){
   n = length(Data[,1]); 
   mesh = seq(0,1,by=1/(m+1)); 
   
+  # estimating the copula by pseudo-observations at pre-smooth grid points
   Fn = rank(Data[,1])/n; Gn = rank(Data[,2])/n; 
   Cn = array(,n);
   un = Fn*n/(n+1); vn = Gn*n/(n+1);
   for(i in 1:n){
     Cn[i] = mean(n*Fn/(n+1)<=un[i] & n*Gn/(n+1)<=vn[i]);
   }
-  
   Cm = array(,c(m+2,m+2)); 
   um = mesh; vm = mesh; Dm = Cm; 
   for(i in 1:(m+2)){
@@ -91,6 +88,7 @@ GS2010_LL = function(Data,m=14,h1=1.5/m,h2=h1,m.I=19){
     }
   }
   
+  # pre-smooth over grid points
   mesh.I = seq(0,1,by=1/(m.I+1)); 
   Cm.I = array(,c(m.I+2,m.I+2)); 
   um.I = mesh.I; vm.I = mesh.I; #Dm.I = Cm.I; 
@@ -101,6 +99,7 @@ GS2010_LL = function(Data,m=14,h1=1.5/m,h2=h1,m.I=19){
     }
   }
   
+  #calculating the AD-type test statistics
   AD = 0
   for(i in 2:(m.I+1)){
     for(j in 2:(m.I+1)){
@@ -111,8 +110,6 @@ GS2010_LL = function(Data,m=14,h1=1.5/m,h2=h1,m.I=19){
       )
     }
   }
-  
-  Reject = c(AD>12.868196); 
-  return(list(TS=AD, Rejection=Reject))
+  return(list(TS=AD))
 }
 

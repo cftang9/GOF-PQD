@@ -22,8 +22,8 @@ EL_Asy <- function(Data){
     An021[i] = min(A021[i],An21[i]);
     An022[i] = max(A022[i],An22[i]);
     
+    # Calculating the log likelihood ratio: 
     llr11 = 0; llr12 = 0; llr21 = 0; llr22 = 0; 
-    
     if(An11[i]>10^(-10) & An11[i]<A011[i]){
       llr11 = n*An11[i]*log(A011[i] / An11[i])
     }
@@ -38,7 +38,7 @@ EL_Asy <- function(Data){
     }
     LLn1[i] = -2*(llr11 + llr12 + llr21 + llr22) 
   }
-  ELn = mean(LLn1)
+  ELn = mean(LLn)
   Reject = c(ELn>1.3078578); 
   return(list(TS=ELn, Rejection=Reject))
 }

@@ -1,3 +1,6 @@
+#Thanks to Dr. Lu and Dr. Ghosh for their kindness sharing their codes. 
+#Here we restrict the time searching the optimal degrees of Bernstein polynomial
+
 #######################################################################
 # function for copula estimation with or without PQD constraint
 
