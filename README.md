@@ -1,7 +1,7 @@
 # Nonparametric Goodness-of-fit Tests for Positive Quadrant Dependence
 
 Here we provide numerical illustrations with R codes for the paper "Goodness-of-fit Test for Positive Quadrant Dependence." 
-In addition, all the numerical results in the paper can be reproduced by using the codes provided here. 
+Additionally, all the numerical results in the paper can be reproduced using the codes provided here. 
 
 ## R Code Demonstration
 
