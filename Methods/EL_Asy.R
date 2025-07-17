@@ -5,7 +5,7 @@ EL_Asy <- function(Data){
   An11 = Hn; An12 = Hn; An21 = Hn; An22 = Hn;
   A011 = Hn; A012 = Hn; A021 = Hn; A022 = Hn;
   An011 = Hn; An012 = Hn; An021 = Hn; An022 = Hn;
-  LLn1 = array(0,n); 
+  LLn = array(0,n); 
   for(i in 1:n){
     IFn = c(X<=X[i]); IGn = c(Y<=Y[i]); 
     Hn[i] = mean(IFn*IGn); 
@@ -36,7 +36,7 @@ EL_Asy <- function(Data){
     if(An22[i]>10^(-10) & An11[i]<A011[i]){
       llr22 = n*An22[i]*log(A022[i] / An22[i])
     }
-    LLn1[i] = -2*(llr11 + llr12 + llr21 + llr22) 
+    LLn[i] = -2*(llr11 + llr12 + llr21 + llr22) 
   }
   ELn = mean(LLn)
   Reject = c(ELn>1.3078578); 
