@@ -10,7 +10,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
       }
     if(log_Fig==T){
         plot(log(Data[,1]),log(Data[,2]),xlab="log X",ylab="log Y", 
-             main="Scatterplot of log-transformed data"))
+             main="Scatterplot of log-transformed data")
       }
     plot(rank(Data[,1])/(n+1),rank(Data[,2])/(n+1),
          xlim=c(0,1),ylim=c(0,1),
