@@ -5,7 +5,7 @@ EL_Fin <- function(Data){
   An11 = Hn; An12 = Hn; An21 = Hn; An22 = Hn;
   A011 = Hn; A012 = Hn; A021 = Hn; A022 = Hn;
   An011 = Hn; An012 = Hn; An021 = Hn; An022 = Hn;
-  LLn1 = array(0,n); 
+  LLn = array(0,n); 
   for(i in 1:n){
     IFn = c(X<=X[i]); IGn = c(Y<=Y[i]); 
     Hn[i] = mean(IFn*IGn); 

@@ -4,4 +4,4 @@ source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GO
 set.seed(10000)
 library(copula)
 Data = rCopula(50,claytonCopula(iTau(claytonCopula(),-0.6)))
-PQD_GOF(Data,Figure=T,log_Fig=F)
+Temp = PQD_GOF(Data,Figure=T,log_Fig=F)
