@@ -1,14 +1,8 @@
 rm(list=ls(all=TRUE))
-source("PQD_GOF_ALL.r")
-
-Data = read.csv("Caffeine_data_updated_062811_CLEAN.csv")
-Data = Data[1:45,]
-Data = Data[,c(3,10)]
-
+source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
+Data = read.csv("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data/3_Necrotizing_enterocolities_data/NEC.csv")
 
 n = length(Data$Birth.weight)
-
-plot(Data$Birth.weight,Data$Time.to.NEC)
 
 #pdf("BirthWeight(log)_vs_TimetoNEC(log).pdf", width=12, height=7)
 par(mfrow=c(1,2))
@@ -24,8 +18,5 @@ mtext(paste("Time to NEC", "diagnosis"), side=2, line=2.45,cex=1.35)
 par(mfrow=c(1,1))
 #dev.off()
 
-cor(Data$Birth.weight, Data$Time.to.NEC)
-cor(Data$Birth.weight, Data$Time.to.NEC,method = "spearman")
-cor(Data$Birth.weight, Data$Time.to.NEC,method = "kendall")
 Data = cbind(Data$Birth.weight,Data$Time.to.NEC)
-Result = PQD_GOF_ALL(Data,Figure=F)
+Result = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=T)
