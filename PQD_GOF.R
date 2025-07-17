@@ -22,7 +22,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     asy.EL = read.csv("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Methods/asy.EL.csv")
     EL_A = list(TS = temp$TS, 
                 CV = as.numeric(quantile(asy.EL,0.95)), 
-                pvalue = mean(asy.EL>temp$TS), 
+                pvalue = mean(asy.EL>=temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("EL_A")
     print(EL_A)
@@ -40,7 +40,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     }
     EL_F = list(TS = temp$TS, 
                 CV = as.numeric(quantile(fin.EL.independent,0.95)), 
-                pvalue = mean(fin.EL.independent>temp$TS), 
+                pvalue = mean(fin.EL.independent>=temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("EL_F")
     print(EL_F)
@@ -70,7 +70,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     
     S_05 = list(TS = temp$TS, 
                 CV = as.numeric(quantile(fin.KS.independent,0.95)), 
-                pvalue = mean(fin.KS.independent>temp$TS), 
+                pvalue = mean(fin.KS.independent>=temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("S_05")
     print(S_05)
@@ -88,7 +88,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     }
     GS_10 = list(TS = temp$TS, 
                  CV = as.numeric(quantile(fin.GS.independent,0.95)), 
-                 pvalue = mean(fin.GS.independent>temp$TS), 
+                 pvalue = mean(fin.GS.independent>=temp$TS), 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("GS_10")
     print(GS_10)
@@ -117,7 +117,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     
     LW_14 = list(TS = temp$TS, 
                  CV = as.numeric(quantile(fin.LW.independent,0.05)), 
-                 pvalue = mean(fin.LW.independent<temp$TS), 
+                 pvalue = mean(fin.LW.independent<=temp$TS), 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("LW_14")
     print(LW_14)
@@ -125,7 +125,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   if(method=="LG_22"| method=="ALL"){
     start.time = Sys.time()
     temp = copula.test(Data,M=1000)
-    LG_22 = list(TS = temp$ad.test, 
+    LG_22 = list(TS = temp$TS, 
                  CV = temp$CV, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))

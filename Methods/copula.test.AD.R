@@ -1,6 +1,3 @@
-#Thanks to Dr. Lu and Dr. Ghosh for their kindness sharing their codes. 
-#Here we focus the AD type test. 
-
 #######################################################################
 # function for testing PQD
 
@@ -189,7 +186,6 @@ copula.test <- function(X, m1 = NULL, m2 = NULL, M=1000){
   #ks.sim <- c()
   #cvm.sim <- c()
   ad.sim <- c()
-  truncate.ave = 0; 
   start.time = Sys.time()
   for (j in 1 : M){
     set.seed(061425000+j)
@@ -207,22 +203,16 @@ copula.test <- function(X, m1 = NULL, m2 = NULL, M=1000){
     
     # Estimation without PQD constraint using simulated PQD data
     EstWithoutPQD.pqd <- copula.est(cbind(U1.pqd,U2.pqd), m1 = m1.nonpqd, m2 = m2.nonpqd, is.pqd = F, print.contour = F)
-    truncate.ave = truncate.ave + EstWithoutPQD.pqd$trunc.status/M
     theta.nonpqd.pqd <- as.vector(t(EstWithoutPQD.pqd$theta.matrix))
     
     #the distribution of test statistics under the null of PQD
     ad.sim[j] <- AD.2(U1.pqd, U2.pqd, m1.nonpqd-1, m2.nonpqd-1, theta.nonpqd.pqd)
     #print(j)
   }
-  #Sys.time() - start.time
 
   return(list(
-    'ad.test' = as.numeric(ad.test), 
-    'ad.quantiles'= quantile(ad.sim, c(0.025, 0.05, 0.1, 0.5, 0.90, 0.95, 0.975)), 
-    pvalue = mean(ad.sim>as.numeric(ad.test)), 
-    Bernstein_WithPQD = c(EstWithPQD$m1,EstWithPQD$m2,EstWithPQD$trunc.status), 
-    Bernstein_WithoutPQD = c(EstWithoutPQD$m1,EstWithoutPQD$m2,EstWithoutPQD$trunc.status), 
-    truncate.ave = truncate.ave 
-  ))
-
+    TS = as.numeric(ad.test), 
+    CV = as.numeric(quantile(ad.sim, 0.95)), 
+    pvalue = mean(ad.sim >= as.numeric(quantile(ad.sim, 0.95)))
+    ))
 }
