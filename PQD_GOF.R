@@ -5,10 +5,12 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   if(Figure==T){
     par(mfrow=c(1,2))
     if(log_Fig==F){
-        plot(Data[,1],Data[,2],xlab="X",ylab="Y")
+        plot(Data[,1],Data[,2],xlab="X",ylab="Y",
+             main="Scatterplot")
       }
     if(log_Fig==T){
-        plot(log(Data[,1]),log(Data[,2]),xlab="log X",ylab="log Y")
+        plot(log(Data[,1]),log(Data[,2]),xlab="log X",ylab="log Y", 
+             main="Scatterplot of log-transformed data"))
       }
     plot(rank(Data[,1])/(n+1),rank(Data[,2])/(n+1),
          xlim=c(0,1),ylim=c(0,1),
