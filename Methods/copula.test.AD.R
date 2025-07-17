@@ -213,6 +213,6 @@ copula.test <- function(X, m1 = NULL, m2 = NULL, M=1000){
   return(list(
     TS = as.numeric(ad.test), 
     CV = as.numeric(quantile(ad.sim, 0.95)), 
-    pvalue = mean(ad.sim >= as.numeric(quantile(ad.sim, 0.95)))
+    pvalue = mean(ad.sim >= as.numeric(ad.test))
     ))
 }
