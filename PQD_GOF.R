@@ -23,7 +23,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     EL_A = list(TS = temp$TS, 
                 pvalue = mean(asy.EL>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(EL_A=EL_A))
+    print(EL_A)
   }
   if(method=="EL_F" | method=="ALL"){
     start.time = Sys.time()
@@ -39,7 +39,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     EL_F = list(TS = temp$TS, 
                 pvalue = mean(fin.EL.independent>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(EL_F=EL_F))
+    print(EL_F)
   }
   if(method=="DS_04"| method=="ALL"){
     start.time = Sys.time()
@@ -48,7 +48,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     DS_04 = list(TS = temp$TS, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(DS_04=DS_04))
+    print(DS_04)
   }
   if(method=="S_05" | method=="ALL"){
     start.time = Sys.time()
@@ -65,9 +65,9 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     S_05 = list(TS = temp$TS, 
                 pvalue = mean(fin.KS.independent>temp$TS), 
                 Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(S_05=S_05))
+    print(S_05)
   }
-  if(method=="G_10" | method=="ALL"){
+  if(method=="GS_10" | method=="ALL"){
     start.time = Sys.time()
     temp = GS2010_LL(Data)
     
@@ -81,7 +81,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     GS_10 = list(TS = temp$TS, 
                  pvalue = mean(fin.GS.independent>temp$TS), 
                  Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(GS_10=GS_10))
+    print(GS_10)
   }
   if(method=="GS_13"| method=="ALL"){
     start.time = Sys.time()
@@ -89,7 +89,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     GS_13 = list(TS = temp$AD, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(GS_13=GS_13))
+    print(GS_13)
   }
   if(method=="LW_14"| method=="ALL"){
     start.time = Sys.time()
@@ -106,7 +106,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     LW_14 = list(TS = temp$TS, 
                  pvalue = mean(fin.LW.independent<temp$TS), 
                  Time = difftime(Sys.time(), start.time, units='sec'))
-    return(list(LW_14=LW_14))
+    print(LW_14)
   }
   if(method=="LG_22"| method=="ALL"){
     start.time = Sys.time()
@@ -114,6 +114,31 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     LG_22 = list(TS = temp$ad.test, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
+    print(LG_22)
+  }
+  
+  if(method=="EL_A"){
+    return(list(EL_A=EL_A))
+  }
+  if(method=="EL_F"){
+    return(list(EL_F=EL_F))
+  }
+  if(method=="DS_04"){
+    return(list(DS_04=DS_04))
+  }
+  if(method=="S_05"){
+    return(list(S_05=S_05))
+  }
+  if(method=="GS_10"){
+    return(list(GS_10=GS_10))
+  }
+  if(method=="GS_13"){
+    return(list(GS_13=GS_13))
+  }
+  if(method=="LW_14"){
+    return(list(LW_14=LW_14))
+  }
+  if(method=="LG_22"){
     return(list(LG_22=LG_22))
   }
   
