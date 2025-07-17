@@ -11,7 +11,7 @@
 
 #######################################################################
 
-copula.est <- function(X, m1 = NULL, m2 = NULL, is.pqd = F, print.contour = F, max.running.time = 30){
+copula.est <- function(X, m1 = NULL, m2 = NULL, is.pqd = F, print.contour = F, max.running.time = 600){
   
   if(!require(quadprog)){
     install.packages("quadprog")

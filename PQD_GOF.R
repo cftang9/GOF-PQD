@@ -91,7 +91,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   if(method=="GS_13"| method=="ALL"){
     start.time = Sys.time()
     temp = GS2013(Data)
-    GS_13 = list(TS = temp$AD, 
+    GS_13 = list(TS = temp$TS, 
                  pvalue = temp$pvalue, 
                  Time = difftime(Sys.time(), start.time, units='sec'))
     print("GS_13")
