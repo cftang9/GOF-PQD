@@ -27,7 +27,8 @@ GS_13      1.2212406      0.4959487 0.00300000 377.651592
 LW_14     -2.4486330     -2.4863221 0.05345000  18.588535
 LG_22      0.9756259      0.8003936 0.05000000  34.879393
 ```
-<img width="2221" height="1204" alt="Illustration_Plots" src="https://github.com/user-attachments/assets/70bbc05e-b406-432f-9c22-a9b22df7651a" />
+<img width="2221" height="1200" alt="Illustrating_Plots" src="https://github.com/user-attachments/assets/a8818d26-c0dd-4101-9cc0-c667f057f3f0" />
+
 
 ### For your dataset
 
