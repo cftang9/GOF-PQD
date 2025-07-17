@@ -11,7 +11,7 @@ Additionally, all the numerical results in the paper can be reproduced using the
 source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
 set.seed(10000)
 library(copula)
-Data = rCopula(50,claytonCopula(iTau(claytonCopula(),-0.6)))
+Data = rCopula(50,claytonCopula(iTau(claytonCopula(),-0.2)))
 Temp = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 ```
 Users can choose "Method" from "EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22" for an individual GOF test. 
