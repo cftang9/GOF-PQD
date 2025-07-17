@@ -20,6 +20,7 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     start.time = Sys.time()
     temp = EL_Asy(Data)
     asy.EL = read.csv("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Methods/asy.EL.csv")
+    asy.EL = asy.EL$x 
     EL_A = list(TS = temp$TS, 
                 CV = as.numeric(quantile(asy.EL,0.95)), 
                 pvalue = mean(asy.EL>=temp$TS), 
