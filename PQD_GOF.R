@@ -1,6 +1,6 @@
 source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF_Methods.R")
 
-PQD_GOF_ALL = function(Data,method="ALL",Figure=T,log_Fig=T){
+PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   n = length(Data[,1])
   if(Figure==T){
     par(mfrow=c(1,2))
