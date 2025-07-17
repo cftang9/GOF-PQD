@@ -160,11 +160,9 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   }
   
   if(method=="All"){
-    
     Table = array(,c(8,4))
     colnames(Table)<-c("Test statistic", "Critical value", "p-value", "Time")
     row.names(Table)<-c("EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22")
-    
     Table[1,1] = EL_A$TS;   Table[1,2] = EL_A$CV;   Table[1,3] = EL_A$pvalue;   Table[1,4] = EL_A$Time; 
     Table[2,1] = EL_F$TS;   Table[2,2] = EL_F$CV;   Table[2,3] = EL_F$pvalue;   Table[2,4] = EL_F$Time; 
     Table[3,1] = DS_04$TS;  Table[3,2] = DS_04$CV;  Table[3,3] = DS_04$pvalue;  Table[3,4] = DS_04$Time; 
@@ -173,7 +171,6 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
     Table[6,1] = GS_13$TS;  Table[6,2] = GS_13$CV;  Table[6,3] = GS_13$pvalue;  Table[6,4] = GS_13$Time; 
     Table[7,1] = LW_14$TS;  Table[7,2] = LW_14$CV;  Table[7,3] = LW_14$pvalue;  Table[7,4] = LW_14$Time; 
     Table[8,1] = LG_22$TS;  Table[8,2] = LG_22$CV;  Table[8,3] = LG_22$pvalue;  Table[8,4] = LG_22$Time; 
-    
     print(Table)
     return(list(EL_A = EL_A, EL_F = EL_F, 
                 DS_04 = DS_04, S_05 = S_05, 
