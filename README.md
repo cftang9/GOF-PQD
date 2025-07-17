@@ -20,7 +20,7 @@ Temp = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 Users can choose "Method" from "EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22" for an individual GOF test. 
 When Method = "ALL", a list of test statistics, critical values, p-value, and time will be provided. 
 ```R
-      Test statistic Critical value   p-value        Time
+      Test statistic Critical value   p-value   Time(sec)
 EL_A       1.2168735      1.3078578 0.0629000   0.2981939
 EL_F       1.2168735      1.0745115 0.0359000   5.6952441
 DS_04      3.2812208      8.2720000 0.3503397   0.4368880
