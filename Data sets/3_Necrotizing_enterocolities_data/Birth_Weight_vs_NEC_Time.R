@@ -19,4 +19,4 @@ par(mfrow=c(1,1))
 #dev.off()
 
 Data = cbind(Data$Birth.weight,Data$Time.to.NEC)
-Result = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=T)
+Results = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=T)

@@ -27,4 +27,4 @@ mtext("Contents", side=2, line=2.45,cex=1.35)
 par(mfrow=c(1,1))
 #dev.off()
 
-PQD_GOF(Data,Figure=F)
+Results = PQD_GOF(Data,Figure=T,log_Fig=T)
