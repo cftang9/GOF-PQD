@@ -52,16 +52,16 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 ## Data Analysis
 
 ### NCAA basketball attendance data 
-Here we provide the dataset [NCAA.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.csv) and the code [NCAA.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.R) performing all the GOF tests for PQD. 
+Here we provide the dataset [NCAA.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.csv) and the R code [NCAA.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.R) performing all the GOF tests for PQD. 
 
 ### Danish insurance data
 
 This data set is from the R package fitdistrplus. 
-Here we provide the dataset [Danish_2y_all_pos.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Danish_2y_all_pos.csv) and the code [Insurance_2y12.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Insurance_2y12.R), performing all the GOF tests for PQD. 
+Here we provide the dataset [Danish_2y_all_pos.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Danish_2y_all_pos.csv) and the R code [Insurance_2y12.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Insurance_2y12.R), performing all the GOF tests for PQD. 
 
 ### Necrotizing enterocolitis data
 
-Here we provide the dataset [NEC.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/3_Necrotizing_enterocolities_data/NEC.csv) and the code [NEC.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/3_Necrotizing_enterocolities_data/NEC.R), performing all the GOF tests for PQD. 
+Here we provide the dataset [NEC.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/3_Necrotizing_enterocolities_data/NEC.csv) and the R code [NEC.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/3_Necrotizing_enterocolities_data/NEC.R), performing all the GOF tests for PQD. 
 
 
 
