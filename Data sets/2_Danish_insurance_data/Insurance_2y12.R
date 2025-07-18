@@ -1,17 +1,9 @@
 rm(list=ls(all=TRUE))
 source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
-library(fitdistrplus)
-data(danishmulti)
-
 # the losses (all positive) of last two years (1989-1990) 
-Data = danishmulti[c(1715:2167),]
-Data = Data[
-  c(Data$Building>0 
-    & Data$Contents>0 
-    & Data$Profits>0),]
-Data = cbind(Data[,2],Data[,3],Data[,4])
+Data = read.csv("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Danish_2y_all_pos.csv")
 
-Data = Data[,c(1,2)]; 
+Data = Data[,c(2,3)]; 
 
 n = length(Data[,1])
 
