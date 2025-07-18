@@ -45,7 +45,7 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 
 #### FGM, CA, and restricted-t
 
-#### Other copulas
+#### Copulas 1 - 6
 
 ####
 
