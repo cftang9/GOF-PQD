@@ -41,11 +41,35 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 
 ## Simulation Results
 
-#### Clayton, Frank, Gumbel, and Gaussian copula
+Here, we provide all the codes and results in the [Simulation](https://github.com/cftang9/GOF-PQD/tree/main/Simulation) folder. 
+To reproduce the simulation results, users need to download the whole folder and run the R codes corresponding to the simulation settings. 
+The asymptotic critical values for the EL test are in the [EL_infinity](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_Infinity/EL_infinity) folder. 
+Other critical values generated from independent copulas are provided in [CV_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_n100) and [CV_n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_2100) folders. 
 
-#### FGM, CA, and restricted-t
+#### Clayton, Frank, Gumbel, and Gaussian copulas (Table 1 and Table C1)
 
-#### Copulas 1 - 6
+We provide the R codes 
+[Table_1_Clayton_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Clayton_n100.R), 
+[Table_1_Frank_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Frank_n100.R), 
+[Table_1_Gumbel_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gumbel_n100.R), and 
+[Table_1_Gaussian_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gaussian_n100.R) for the size and power comparisons of the Clayton, Frank, Gumbel, and Gaussian copulas for sample size 100 in Table 1 and results in [Table_1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_1_CFGG_n100) folder. 
+For the results from a sample size of 200 in Table C1, the codes and results can be found in the [Table_C1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n100) folder. 
+
+
+####  Farlie-Gumbel-Morgenstern (FGM), Cuadras-Augé (CA), and restricted-t (Table 2 and Table C2)
+
+In addition, we provide the R codes 
+[Table_2_FGM_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_2_FGM_CA_Rt_100/Table_2_FGM_n100.R), 
+[Table_2_CA_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_2_FGM_CA_Rt_100/Table_2_CA_n100.R), and 
+[Table_2_Rt_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_2_FGM_CA_Rt_100/Table_2_Rt_n100.R) for the size and power comparisons of the FGM, CA, restricted-t copulas for sample size 100 in Table 1 and results in [Table_2_FGM_CA_Rt_100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_2_FGM_CA_Rt_n100) folder. 
+For the results from a sample size of 200 in Table C1, the codes and results can be found in the [Table_2_FGM_CA_Rt_200](Table_2_FGM_CA_Rt_n200) folder. 
+
+#### Copulas 1 - 6 (Table C3)
+
+Last, we provide the R codes 
+[]() for the size and power comparisons of the FGM, CA, restricted-t copulas for sample size 100 in Table 1 and results in [Table_1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_1_CFGG_n100) folder. 
+For the results from a sample size of 200 in Table C1, the codes and results can be found in the [Table_C1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n100) folder. 
+
 
 ####
 
