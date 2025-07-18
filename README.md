@@ -56,8 +56,8 @@ Here we provide the dataset [NCAA.csv](https://raw.githubusercontent.com/cftang9
 
 ### Danish insurance data
 
-This data set is from the R package fitdistrplus. 
-Here we provide the dataset [Danish_2y_all_pos.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Danish_2y_all_pos.csv) and the R code [Insurance_2y12.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Insurance_2y12.R), performing all the GOF tests for PQD. 
+This dataset [Danish_2y_all_pos.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Danish_2y_all_pos.csv) (1989-1990 with all positive losses in Buildings, Contents, and Profits) is collected from the R package fitdistrplus. 
+We applied the R code [Insurance_2y12.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Insurance_2y12.R), to perform and compare the GOF tests for PQD. 
 
 ### Necrotizing enterocolitis data
 
