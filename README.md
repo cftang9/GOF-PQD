@@ -76,13 +76,16 @@ For the results from a sample size of 200 in Table C3, the codes and results can
 
 ## Data sets
 
+We include all the data sets and their R codes in [Data sets](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets) folders. 
+The numerical results can be obtained by applying the following codes directly, as all the necessary functions and related data can be sourced and loaded online. 
+
 ### NCAA basketball attendance data 
 Here we provide the dataset [NCAA.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.csv) and the R code [NCAA.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.R) performing all the GOF tests for PQD. 
 
 ### Danish insurance data
 
 This dataset [Danish_2y_all_pos.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Danish_2y_all_pos.csv) (1989-1990 with all positive losses in Buildings, Contents, and Profits) is collected from the R package fitdistrplus. 
-We applied the R code [Insurance_2y12.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Insurance_2y12.R), to perform and compare the GOF tests for PQD. 
+We applied the R code [Insurance_2y12.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/2_Danish_insurance_data/Insurance_2y12.R) to perform and compare the GOF tests for PQD. 
 
 ### Necrotizing enterocolitis data
 
