@@ -12,7 +12,7 @@ source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GO
 set.seed(10000)
 library(copula)
 Data = rCopula(50,claytonCopula(iTau(claytonCopula(),-0.2)))
-Temp = PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
+PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 ```
 
 <img width="2186" height="1232" alt="Illustrating_Plot" src="https://github.com/user-attachments/assets/4735d9b8-e134-453a-b45c-4a7438bb1530" />
@@ -31,10 +31,13 @@ LW_14     -2.5812064     -2.4863221 0.0365700  19.0609691
 LG_22      0.4881553      0.6012889 0.0820000  34.9922369
 ```
 
-
-
-
 ### For your dataset
+```R
+# Source the main function from PQD_GOF.R online
+source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
+# Save your data into "Data" as a matrix, for example, Data = array(runif(2*50),c(50,2)). 
+PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
+```
 
 ## Simulation Results
 
