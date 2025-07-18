@@ -41,7 +41,11 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 
 ## Simulation Results
 
-Here we provide all the codes and results in the folder [Simulation](https://github.com/cftang9/GOF-PQD/tree/main/Simulation). 
+Here, we provide all the codes and results in the [Simulation](https://github.com/cftang9/GOF-PQD/tree/main/Simulation) folder. 
+To reproduce the simulation results, 
+
+The asymptotic critical values for the EL test are in the [EL_infinity](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_Infinity/EL_infinity) folder. 
+Other critical values generated from independent copulas are provided in [CV_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_n100) and [CV_n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_2100) folders. 
 
 #### Clayton, Frank, Gumbel, and Gaussian copula (Table 1 and Table C1)
 
