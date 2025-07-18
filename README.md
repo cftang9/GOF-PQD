@@ -51,11 +51,14 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 
 ## Data Analysis
 
-### NCAA basketball attendance data
+### NCAA basketball attendance data 
+Here we provide the data set [NCAA.csv]([https://pages.github.com/](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.csv)) and the code performing all the GOF tests for PQD. 
 
 ### Danish insurance data
 
-### Necrotizing enterocolitis data
+This data set is from the R package fitdistrplus. 
+
+### Necrotizing enterocolitis data ()
 
 
 
