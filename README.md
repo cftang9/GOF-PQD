@@ -67,9 +67,9 @@ For the results from a sample size of 200 in Table C1, the codes and results can
 
 #### Copulas 1 - 6 (Table C3)
 
-Last, we provide the R codes 
-[]() for the size and power comparisons of the FGM, CA, restricted-t copulas for sample size 100 in Table 1 and results in [Table_1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_1_CFGG_n100) folder. 
-For the results from a sample size of 200 in Table C1, the codes and results can be found in the [Table_C1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n100) folder. 
+Last, we provide the R codes for Copulas 1 to 6 (MixFrank I, MixFrank II, Asymmetric copula, A copula, and copulas from quadratic and sinusoidal regressions)
+[6C_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_C3_6copulas/n100/Table_2_6C_n100.R) for the size and power comparisons with sample size 100 in Table C3 in [n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C3_6copulas/n100) folder. 
+For the results from a sample size of 200 in Table C3, the codes and results can be found in the [n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C3_6copulas/n100) folder. 
 
 
 ####
