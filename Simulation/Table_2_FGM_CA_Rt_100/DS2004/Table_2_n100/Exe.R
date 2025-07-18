@@ -1,0 +1,20 @@
+rm(list = ls(all=TRUE))
+source("Sim_Asymmetric.R")
+source("Sim_CA_N02.R")
+source("Sim_CA_N04.R")
+source("Sim_CA_N06.R")
+source("Sim_CA_N08.R")
+source("Sim_CA_N10.R")
+source("Sim_Copula_A.R")
+source("Sim_FGM_N02.R")
+source("Sim_FGM_N04.R")
+source("Sim_FGM_N06.R")
+source("Sim_FGM_N08.R")
+source("Sim_FGM_N10.R")
+source("Sim_MixFrank_1.R")
+source("Sim_MixFrank_2.R")
+source("Sim_qrm.R")
+source("Sim_srm.R")
+
+
+
