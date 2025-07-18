@@ -41,11 +41,13 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 
 ## Simulation Results
 
-#### Clayton, Frank, Gumbel, and Gaussian copula
+Here we provide all the codes and results in the folder [Simulation](https://github.com/cftang9/GOF-PQD/tree/main/Simulation). 
 
-#### FGM, CA, and restricted-t
+#### Clayton, Frank, Gumbel, and Gaussian copula (Table 1 and Table C1)
 
-#### Copulas 1 - 6
+#### FGM, CA, and restricted-t (Table 2 and Table C2)
+
+#### Copulas 1 - 6 (Table C3)
 
 ####
 
