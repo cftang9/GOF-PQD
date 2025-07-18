@@ -74,7 +74,7 @@ For the results from a sample size of 200 in Table C3, the codes and results can
 
 ####
 
-## Data Analysis
+## Data sets
 
 ### NCAA basketball attendance data 
 Here we provide the dataset [NCAA.csv](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.csv) and the R code [NCAA.r](https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/Data%20sets/1_NCAA_basketball_attendance_data/NCAA.R) performing all the GOF tests for PQD. 
