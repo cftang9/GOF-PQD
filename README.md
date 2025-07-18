@@ -35,7 +35,7 @@ LG_22      0.4881553      0.6012889 0.0820000  34.9922369
 ```R
 # Source the main function from PQD_GOF.R online
 source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GOF.R")
-# Save your data into "Data" as a matrix, for example, Data = array(runif(2*50),c(50,2)). 
+# Save your data into "Data" as an n by 2 matrix, for example, Data = array(runif(2*50),c(50,2)) with n=50. 
 PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 ```
 
