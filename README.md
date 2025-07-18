@@ -12,6 +12,7 @@ source("https://raw.githubusercontent.com/cftang9/GOF-PQD/refs/heads/main/PQD_GO
 set.seed(10000)
 library(copula)
 Data = rCopula(50,claytonCopula(iTau(claytonCopula(),-0.2)))
+# Run the main function for all the GOF tests for PQD. When "log_Fig" is TRUE, a log-transformed scatterplot will be provided if "Figure" is TRUE. 
 PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 ```
 
