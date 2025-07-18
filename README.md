@@ -43,7 +43,7 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 ## Simulation Results
 
 Here, we provide all the codes and results in the [Simulation](https://github.com/cftang9/GOF-PQD/tree/main/Simulation) folder. 
-To reproduce the simulation results, users need to download the whole folder and run the R codes corresponding to the simulation settings. 
+To reproduce the simulation results, users must download the entire folder and run the R code corresponding to the simulation settings. 
 The asymptotic critical values for the EL test are in the [EL_infinity](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_Infinity/EL_infinity) folder. 
 Other critical values generated from independent copulas are provided in [CV_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_n100) and [CV_n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/CV_2100) folders. 
 
@@ -67,7 +67,7 @@ For the results from a sample size of 200 in Table C1, the codes and results can
 
 #### Copulas 1 - 6 (Table C3)
 
-Last, we provide the R codes for Copulas 1 to 6 (MixFrank I, MixFrank II, Asymmetric copula, A copula, and copulas from quadratic and sinusoidal regressions)
+Last, we provide the R codes for Copulas 1 to 6 (MixFrank I, MixFrank II, Asymmetric copula, Copula A, and copulas from quadratic and sinusoidal regressions)
 [6C_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_C3_6copulas/n100/Table_2_6C_n100.R) for the size and power comparisons with sample size 100 in Table C3 in [n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C3_6copulas/n100) folder. 
 For the results from a sample size of 200 in Table C3, the codes and results can be found in the [n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C3_6copulas/n100) folder. 
 
