@@ -48,7 +48,12 @@ Other critical values generated from independent copulas are provided in [CV_n10
 
 #### Clayton, Frank, Gumbel, and Gaussian copula (Table 1 and Table C1)
 
-We provide the R codes [](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Clayton_n100.R), [](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Frank_n100.R), [](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gumbel_n100.R), and [](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gaussian_n100.R)
+We provide the R codes 
+[Table_1_Clayton_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Clayton_n100.R), 
+[Table_1_Clayton_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Frank_n100.R), 
+[Table_1_Clayton_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gumbel_n100.R), and 
+[Table_1_Clayton_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gaussian_n100.R). 
+
 
 #### FGM, CA, and restricted-t (Table 2 and Table C2)
 
