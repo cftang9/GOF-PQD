@@ -19,7 +19,7 @@ PQD_GOF(Data,method="ALL",Figure=T,log_Fig=F)
 <img width="2186" height="1232" alt="Illustrating_Plot" src="https://github.com/user-attachments/assets/4735d9b8-e134-453a-b45c-4a7438bb1530" />
 
 Users can choose "Method" from "EL_A", "EL_F", "DS_04", "S_05", "GS_10", "GS_13", "LW_14", "LG_22" for an individual GOF test. 
-When Method = "ALL", a list of test statistics, critical values, p-value, and time will be provided. 
+When Method = "ALL", a list of test statistics, critical values, p-values, and time (including critical value generation time in seconds) will be provided. 
 ```R
       Test statistic Critical value   p-value   Time(sec)
 EL_A       1.2168735      1.3078578 0.0629000   0.2981939
