@@ -56,7 +56,13 @@ We provide the R codes
 For the results from a sample size of 200 in Table C1, one can find the codes and results in [Table_C1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n100) folder. 
 
 
-#### FGM, CA, and restricted-t (Table 2 and Table C2)
+####  Farlie-Gumbel-Morgenstern (FGM), Cuadras-Augé (CA), and restricted-t (Table 2 and Table C2)
+
+We provide the R codes 
+[Table_2_FGM_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_2_FGM_CA_Rt_100/Table_2_FGM_n100.R), 
+[Table_2_CA_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_2_FGM_CA_Rt_100/Table_2_CA_n100.R), and 
+[Table_2_Rt_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_2_FGM_CA_Rt_100/Table_2_Rt_n100.R) for the size and power comparisons of the FGM, CA, restricted-t copulas for sample size 100 in Table 1 and results in [Table_1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_1_CFGG_n100) folder. 
+For the results from a sample size of 200 in Table C1, one can find the codes and results in [Table_C1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n100) folder. 
 
 #### Copulas 1 - 6 (Table C3)
 
