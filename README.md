@@ -54,7 +54,7 @@ We provide the R codes
 [Table_1_Frank_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Frank_n100.R), 
 [Table_1_Gumbel_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gumbel_n100.R), and 
 [Table_1_Gaussian_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_1_CFGG_n100/Table_1_Gaussian_n100.R) for the size and power comparisons of the Clayton, Frank, Gumbel, and Gaussian copulas for sample size 100 in Table 1 and results in [Table_1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_1_CFGG_n100) folder. 
-For the results from a sample size of 200 in Table C1, the codes and results can be found in the [Table_C1_CFGG_n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n100) folder. 
+For the results from a sample size of 200 in Table C1, the codes and results can be found in the [Table_C1_CFGG_n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C1_CFGG_n200) folder. 
 
 
 ####  Farlie-Gumbel-Morgenstern (FGM), Cuadras-Augé (CA), and restricted-t (Table 2 and Table C2)
