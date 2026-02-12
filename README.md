@@ -71,7 +71,7 @@ Last, we provide the R codes for Copulas 1 to 6 (MixFrank I, MixFrank II, Asymme
 [6C_n100](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Table_C3_6copulas/n100/Table_2_6C_n100.R) for the size and power comparisons with sample size 100 in Table C3 in [n100](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C3_6copulas/n100) folder. 
 For the results from a sample size of 200 in Table C3, the codes and results can be found in the [n200](https://github.com/cftang9/GOF-PQD/tree/main/Simulation/Table_C3_6copulas/n100) folder. 
 
-Lastly, the extra size study can be found in the [Size Study](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Simulation/Size_Study) folder. 
+Lastly, the extra size study can be found in the [Size Study](https://github.com/cftang9/GOF-PQD/blob/main/Simulation/Size_Study) folder. 
 
 ####
 
