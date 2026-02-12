@@ -62,18 +62,9 @@ PQD_GOF = function(Data,method="ALL",Figure=T,log_Fig=T){
   if(method=="S_05" | method=="ALL"){
     start.time = Sys.time()
     temp = PQD.Dist.Joint.KS(Data)
-    
-    B0 = 10000; 
-    fin.KS.independent = array(,B0); 
-    for(b0 in 1:B0){
-      set.seed(070125000+b0)
-      Data0 = array(runif(2*n),c(n,2)); 
-      fin.KS.independent[b0] = PQD.Dist.Joint.KS(Data0)$TS
-    }
-    
     S_05 = list(TS = temp$TS, 
-                CV = as.numeric(quantile(fin.KS.independent,0.95)), 
-                pvalue = mean(fin.KS.independent>=temp$TS), 
+                CV = temp$CV, 
+                pvalue = temp$pvalue, 
                 Time = difftime(Sys.time(), start.time, units='sec'))
     print("S_05")
     print(S_05)
